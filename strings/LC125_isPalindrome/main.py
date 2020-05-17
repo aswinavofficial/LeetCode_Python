@@ -5,15 +5,15 @@ class Solution(object):
         :rtype: bool
         """
         import re
-        
-        s = re.sub(r'[\W_]','',s).lower()
-        
+
+        s = re.sub(r"[\W_]", "", s).lower()
+
         left = 0
         right = len(s) - 1
-        
+
         while left < right:
             if s[left] != s[right]:
                 return False
-            left = left +1
-            right = right -1
+            left = left + 1
+            right = right - 1
         return True
